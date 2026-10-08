@@ -39,4 +39,3 @@ A trajetória foi fornecida pelo responsável. Logo e retrato são os anexos env
 ## Alterações futuras
 
 Edite os arquivos e envie para `main`. Com a implantação automática ativada na Hostinger, novos commits dessa branch serão implantados. A conexão inicial, o domínio e o SSL são configurados no painel da hospedagem.
-

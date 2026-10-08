@@ -1,0 +1,20 @@
+# Apache / LiteSpeed (Hostinger): site estático sem reescrita de rotas.
+DirectoryIndex index.html
+Options -Indexes
+AddDefaultCharset UTF-8
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript image/svg+xml
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|css|js)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_authz_core.c>
+  <FilesMatch "^(README\.md|HOSTINGER\.md|EDICAO-IMAGEM\.txt|\.git.*)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
